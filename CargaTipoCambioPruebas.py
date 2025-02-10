@@ -7,10 +7,9 @@ from emailer import EMailer
 
 def main():
     formato_fecha_mx = LogicaNegocio.FORMATO_FECHA_MX
-    formato_fecha_iso = LogicaNegocio.FORMATO_FECHA_ISO
 
     try:
-        url = "http://www.banxico.org.mx/tipcamb/llenarTiposCambioAction.do?idioma=sp"
+        url = "https://www.banxico.org.mx/tipcamb/llenarTiposCambioAction.do?idioma=sp"
         tipos_cambio = LogicaNegocio.encuentra_tipos_cambio(url)
 
         if tipos_cambio:
