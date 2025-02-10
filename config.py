@@ -1,4 +1,4 @@
-from os import path, getcwd
+iofrom os import path, getcwd
 from configparser import SafeConfigParser
 
 class Config(object):
@@ -15,7 +15,7 @@ class Config(object):
             for option in options:
                 try:
                     dict[option] = parser.get(section, option)
-                except:
+                except Exception:
                     dict[option] = None
             return dict
         except Exception as ex:
