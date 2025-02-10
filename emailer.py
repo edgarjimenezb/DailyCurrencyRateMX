@@ -4,7 +4,7 @@ from config import Config
 from email.mime.text import MIMEText
 from email.utils import formataddr
 
-log = logger.getLogger()
+log = logger.get_logger()
 
 class EMailer(object):
     """Clase para manejo de e-mail"""
