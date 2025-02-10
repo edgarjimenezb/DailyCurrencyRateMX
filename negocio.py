@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import requests
-from decimal import *
 from datetime import datetime, timedelta
 from time import strptime, strftime
 from bs4 import BeautifulSoup
