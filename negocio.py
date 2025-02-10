@@ -6,7 +6,7 @@ from time import strptime, strftime
 from bs4 import BeautifulSoup
 import logger
 
-log = logger.getLogger()
+log = logger.get_logger()
 
 class LogicaNegocio(object):
     """Clase de lógica de negocio"""
