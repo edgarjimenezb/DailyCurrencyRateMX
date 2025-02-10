@@ -2,7 +2,7 @@
 
 from datetime import datetime
 from time import strftime
-from pyodbc import connect
+from pyodbc import connect # type: ignore
 from config import Config
 import logger
 

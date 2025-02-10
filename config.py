@@ -1,4 +1,4 @@
-iofrom os import path, getcwd
+from os import path, getcwd
 from configparser import SafeConfigParser
 
 class Config(object):
