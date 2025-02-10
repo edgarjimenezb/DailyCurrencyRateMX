@@ -58,12 +58,12 @@ class LogicaNegocio(object):
             if contenido != None:
                 coleccion_divs = contenido.find_all("div")
                 for div in coleccion_divs:
-                    id = div.get("id")
-                    if id != None:
-                        if cls.DICCIONARIO_MONEDAS.get(id.upper(), "") != "":
+                    div_id = div.get("id")
+                    if div_id != None:
+                        if cls.DICCIONARIO_MONEDAS.get(div_id.upper(), "") != "":
                             tipos_cambio[id.upper()] = LogicaNegocio.formato_cadena_numero(str(div.text))
-                        elif id.upper() in cls.DICCIONARIO_FECHAS.values():
-                            fechas[id.upper()] = LogicaNegocio.formato_cadena_fecha(str(div.text))
+                        elif div_id.upper() in cls.DICCIONARIO_FECHAS.values():
+                            fechas[div_id.upper()] = LogicaNegocio.formato_cadena_fecha(str(div.text))
             return LogicaNegocio.convierte_diccionarios(tipos_cambio, fechas)
         except Exception as ex:
             log.error("Error al leer el sitio web: %s", ex)
