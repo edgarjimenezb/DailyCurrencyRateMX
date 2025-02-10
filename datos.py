@@ -6,7 +6,7 @@ from pyodbc import connect
 from config import Config
 import logger
 
-log = logger.getLogger()
+log = logger.get_logger()
 
 class BaseDatos(object):
     """Clase de acceso a datos"""
